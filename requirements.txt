@@ -1,5 +1,6 @@
 dj-database-url
 django
 django-heroku-connect
+psycopg2
 waitress
 whitenoise
