@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "connection": {
+    "organization_id": "",
+    "app_name": "",
+    "exported_at": "2018-01-08T21:45:28.752365+00:00"
+  },
+  "mappings": [
+    {
+      "object_name": "User",
+      "config": {
+        "access": "read_only",
+        "sf_notify_enabled": true,
+        "sf_polling_seconds": 120,
+        "sf_max_daily_api_calls": 30000,
+        "fields": {
+          "ID": {},
+          "SystemModstamp": {},
+          "Username": {},
+          "Email": {},
+          "Department": {},
+          "Title": {}
+        },
+        "indexes": {
+          "ID": {
+            "unique": true
+          },
+          "SystemModstamp": {
+            "unique": false
+          }
+        }
+      }
+    }
+  ]
+}
