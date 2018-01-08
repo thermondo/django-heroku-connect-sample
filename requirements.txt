@@ -1,0 +1,5 @@
+dj-database-url
+django
+django-heroku-connect
+waitress
+whitenoise

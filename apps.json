@@ -1,0 +1,40 @@
+{
+  "name": "Django Heroku Connect Example",
+  "description": "A simple example app for Django and Heroku Connect.",
+  "keywords": [
+    "django",
+    "heroku-connect",
+    "postgresql"
+  ],
+  "repository": "https://github.com/Thermondo/django-heroku-connect-example-app",
+  "success_url": "/",
+  "env": {
+    "SECRET_KEY": {
+      "description": "Secret key for Django app.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "Standard-1X"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    },
+    {
+      "plan": "herokuconnect",
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
