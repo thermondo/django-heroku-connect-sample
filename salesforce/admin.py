@@ -32,12 +32,8 @@ class ReadOnlyAdminMixin:
         pass
 
 
-class UserCommentInlineAdmin(TabularInline):
-    model = models.UserComment
-
-
 class UserAdmin(ReadOnlyAdminMixin, ModelAdmin):
-    inlines = [UserCommentInlineAdmin]
+    pass
 
 
 site.register(models.User)

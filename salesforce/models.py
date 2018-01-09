@@ -1,4 +1,3 @@
-from django.db import models
 from heroku_connect.db import models as hc_models
 
 
@@ -11,9 +10,3 @@ class User(hc_models.HerokuConnectModel):
     department = hc_models.Text(
         sf_field_name='Department', max_length=80)
     title = hc_models.Text(sf_field_name='Title', max_length=80)
-
-
-class UserComment(models.Model):
-    user = models.ForeignKey(User, to_field='sf_id',
-                             on_delete=models.SET_NULL, null=True)
-    comment = models.TextField()
