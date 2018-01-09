@@ -1,5 +1,5 @@
 from django.db import models
-from heroku_connect import models as hc_models
+from heroku_connect.db import models as hc_models
 
 
 class User(hc_models.HerokuConnectModel):
