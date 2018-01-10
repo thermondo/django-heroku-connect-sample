@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Salesforce Users</title>
+    <title>Django Heroku Connect Sample</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
 <body>
 
-<table>
+<table class="striped">
+    <thead>
     <tr>
         <th>Username</th>
         <th>Email</th>
         <th>Title</th>
         <th>Department</th>
     </tr>
+    </thead>
+    <tbody>
     {% for object in object_list %}
         <tr>
             <td>{{ object.username }}</td>
@@ -21,6 +26,7 @@
             <td>{{ object.department }}</td>
         </tr>
     {% endfor %}
+    </tbody>
 </table>
 
 </body>
