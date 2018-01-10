@@ -24,23 +24,22 @@ First click the deploy button an create your own app.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thermondo/django-heroku-connect-example-app)
 
-Next connect heroku connect to you newly created database.
+Wait until the app is deployed, this should only take a couple seconds.
 
-```shell
-heroku connect:db:set --schema salesforce --db DATABASE_URL -a <app_name>
+Set name of your newly created app to your environment to make things simpler:
+
+```bash
+export HEROKU_APP_NAME=app_name  # please replace with your app name
 ```
 
-You will now need to authenticate Heroku Connect with salesforce. If you don't
-have a 
+Finally run the following command and follow the instructions. You will be
+prompted to login to your Salesforce sandbox. 
 
-```shell
-heroku connect:sf:auth -a <app_name>
-```
-
-Finally you need to import the Heroku Connect configuration.
-
-```shell
-heroku connect:import schema.json -a <app_name>
+```bash
+heroku connect:info -a "$HEROKU_APP_NAME"
+heroku connect:db:set --schema salesforce --db DATABASE_URL -a "$HEROKU_APP_NAME"
+heroku connect:sf:auth -a "$HEROKU_APP_NAME"
+heroku connect:import schema.json -a "$HEROKU_APP_NAME"
 ```
 
 That's it, enjoy!

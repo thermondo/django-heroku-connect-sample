@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salesforce Users</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Title</th>
+        <th>Department</th>
+    </tr>
+    {% for object in object_list %}
+        <tr>
+            <td>{{ object.username }}</td>
+            <td>{{ object.email }}</td>
+            <td>{{ object.title }}</td>
+            <td>{{ object.department }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

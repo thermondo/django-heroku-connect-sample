@@ -1,6 +1,7 @@
 {
   "name": "Django Heroku Connect Example",
   "description": "A simple example app for Django and Heroku Connect.",
+  "logo": "https://avatars.githubusercontent.com/u/453694",
   "keywords": [
     "django",
     "heroku-connect",

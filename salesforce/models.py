@@ -10,3 +10,6 @@ class User(hc_models.HerokuConnectModel):
     department = hc_models.Text(
         sf_field_name='Department', max_length=80)
     title = hc_models.Text(sf_field_name='Title', max_length=80)
+
+    def __str__(self):
+        return self.username
