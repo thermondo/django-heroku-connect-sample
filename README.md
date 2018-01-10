@@ -13,7 +13,7 @@ heroku plugins:install heroku-connect-plugin
 You will also need a local copy of the repo on you development machine.
 
 ```shell
-git clone https://github.com/Thermondo/django-heroku-connect-example-app.git
+git clone https://github.com/Thermondo/django-heroku-connect-sample.git
 ```
 
 Last but not least you will obviously need a Salesforce sandbox.
@@ -22,7 +22,7 @@ Last but not least you will obviously need a Salesforce sandbox.
 
 First click the deploy button an create your own app.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thermondo/django-heroku-connect-example-app)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thermondo/django-heroku-connect-sample)
 
 Wait until the app is deployed, this should only take a couple seconds.
 
