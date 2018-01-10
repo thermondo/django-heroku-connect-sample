@@ -39,6 +39,7 @@ prompted to login to your Salesforce sandbox.
 heroku connect:info -a "$HEROKU_APP_NAME"
 heroku connect:db:set --schema salesforce --db DATABASE_URL -a "$HEROKU_APP_NAME"
 heroku connect:sf:auth -a "$HEROKU_APP_NAME"
+sleep 3  # give heroku connect a second to connect
 heroku connect:import schema.json -a "$HEROKU_APP_NAME"
 ```
 
