@@ -28,18 +28,35 @@ Wait until the app is deployed, this should only take a couple seconds.
 
 Set name of your newly created app to your environment to make things simpler:
 
-```bash
+```
 export HEROKU_APP_NAME=app_name  # please replace with your app name
 ```
 
-Finally run the following command and follow the instructions. You will be
-prompted to login to your Salesforce sandbox. 
+#### Configuring Salesforce connection
+
+You can configure a Salesforce connection using the UI:
+
+```bash
+heroku addons:open herokuconnect -a "$HEROKU_APP_NAME"
+```
+
+It will open the Heroku Connect page. Click on Setup and Next, Next, Next.
+
+From the command line, run the following command and follow the instructions.
+You will be prompted to login to your Salesforce sandbox. 
 
 ```bash
 heroku connect:info -a "$HEROKU_APP_NAME"
 heroku connect:db:set --schema salesforce --db DATABASE_URL -a "$HEROKU_APP_NAME"
 heroku connect:sf:auth -a "$HEROKU_APP_NAME"
 sleep 3  # give heroku connect a second to connect
+```
+
+#### Importing Django Heroku Connect schema
+
+For both you should import the schema:
+
+```
 heroku connect:import schema.json -a "$HEROKU_APP_NAME"
 ```
 
