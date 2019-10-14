@@ -28,7 +28,7 @@ Wait until the app is deployed, this should only take a couple seconds.
 
 Set name of your newly created app to your environment to make things simpler:
 
-```
+```bash
 export HEROKU_APP_NAME=app_name  # please replace with your app name
 ```
 
