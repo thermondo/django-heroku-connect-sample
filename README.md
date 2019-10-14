@@ -40,7 +40,7 @@ You can configure a Salesforce connection using the UI:
 heroku addons:open herokuconnect -a "$HEROKU_APP_NAME"
 ```
 
-It will open the Heroku Connect page. Click on Setup and Next, Next, Next.
+It will open the Heroku Connect page. Click on Setup and follow the process.
 
 From the command line, run the following command and follow the instructions.
 You will be prompted to login to your Salesforce sandbox. 
@@ -54,7 +54,7 @@ sleep 3  # give heroku connect a second to connect
 
 #### Importing Django Heroku Connect schema
 
-For both you should import the schema:
+In both cases, from UI or exclusive via terminal, you should import the schema:
 
 ```
 heroku connect:import schema.json -a "$HEROKU_APP_NAME"
