@@ -3,4 +3,4 @@ django==3.0.9
 django-heroku-connect==0.20.0
 psycopg2==2.8.5
 waitress==1.4.4
-whitenoise==5.1.0
+whitenoise==5.2.0
